@@ -18,6 +18,7 @@ export default function Footer() {
             <Link to="/services" className="hover:text-white">Services</Link>
             <Link to="/consultation" className="hover:text-white">Consultation</Link>
             <Link to="/contact" className="hover:text-white">Contact</Link>
+            <Link to="/blog" className="hover:text-white">Blog</Link>
           </div>
           <div className="flex items-center justify-start md:justify-end gap-3">
             <a href="#" className="p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white"><Twitter size={16} /></a>
@@ -31,7 +32,7 @@ export default function Footer() {
             to="/consultation"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 text-slate-900 font-semibold"
           >
-            <Calendar size={16} /> Book 1:1 Consultation
+            <Calendar size={16} /> Book Your Free 1:1 Strategy Call
           </Link>
         </div>
       </div>

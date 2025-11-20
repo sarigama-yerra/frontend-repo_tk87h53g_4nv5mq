@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { ArrowRight } from 'lucide-react';
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              AI-Powered Digital Marketing That Brings Real Growth.
+              AI-Driven Marketing Systems for Digital Growth: Get More Leads in Half the Time.
             </h1>
             <p className="mt-5 text-lg text-slate-300">
               We focus on measurable outcomes: qualified leads, higher ROAS, and compounding brand equity. No buzzwords—just systems that drive revenue.
@@ -32,7 +32,7 @@ export default function Hero() {
                 to="/consultation"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500 text-slate-900 font-semibold shadow-[0_0_40px_rgba(34,211,238,0.6)] hover:shadow-[0_0_55px_rgba(34,211,238,0.8)] transition"
               >
-                Book 1:1 Consultation <ArrowRight size={18} />
+                Book Your Free 1:1 Strategy Call <ArrowRight size={18} />
               </Link>
               <Link
                 to="/services"
@@ -45,7 +45,9 @@ export default function Hero() {
 
           <GlowCard>
             <div className="aspect-[4/3] md:aspect-[16/10]">
-              <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+              <Suspense fallback={<div className="w-full h-full grid place-items-center text-slate-500">Loading animation…</div>}>
+                <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+              </Suspense>
             </div>
           </GlowCard>
         </div>

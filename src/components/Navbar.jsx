@@ -32,6 +32,9 @@ function Navbar() {
             <NavLink to="/contact" className={navLinkClass}>
               Contact
             </NavLink>
+            <NavLink to="/blog" className={navLinkClass}>
+              Blog
+            </NavLink>
           </nav>
 
           <div className="hidden md:block">
@@ -40,7 +43,7 @@ function Navbar() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 text-slate-900 font-semibold shadow-[0_0_25px_rgba(34,211,238,0.6)] hover:shadow-[0_0_35px_rgba(34,211,238,0.8)] transition"
             >
               <Calendar size={18} />
-              Book 1:1 Consultation
+              Book Your Free 1:1 Strategy Call
             </Link>
           </div>
 
@@ -68,12 +71,15 @@ function Navbar() {
               <NavLink onClick={() => setOpen(false)} to="/contact" className={navLinkClass}>
                 Contact
               </NavLink>
+              <NavLink onClick={() => setOpen(false)} to="/blog" className={navLinkClass}>
+                Blog
+              </NavLink>
               <Link
                 to="/consultation"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 text-slate-900 font-semibold shadow-[0_0_25px_rgba(34,211,238,0.6)]"
               >
-                <Calendar size={18} /> Book 1:1 Consultation
+                <Calendar size={18} /> Book Your Free 1:1 Strategy Call
               </Link>
             </div>
           </div>
